@@ -18,6 +18,9 @@
 
 📏 Real-time line count: **3,689 lines** (run `bash core_agent_lines.sh` to verify anytime)
 
+## 本分支新增
+1.新增ddgs，搜索免费
+
 ## 📢 News
 
 - **2026-02-16** 🦞 nanobot now integrates a [ClawHub](https://clawhub.ai) skill — search and install public agent skills.
