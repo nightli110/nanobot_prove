@@ -19,7 +19,8 @@
 📏 Real-time line count: **3,689 lines** (run `bash core_agent_lines.sh` to verify anytime)
 
 ## 本分支新增
-1.新增ddgs，搜索免费
+1. 新增ddgs，搜索免费
+2. github skill更新去掉git cli依赖，需要在config 中配置token
 
 ## 📢 News
 

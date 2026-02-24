@@ -355,6 +355,7 @@ def gateway(
         memory_window=config.agents.defaults.memory_window,
         brave_api_key=config.tools.web.search.api_key or None,
         exec_config=config.tools.exec,
+        github_api_token=config.tools.github.api_token or None,
         cron_service=cron,
         restrict_to_workspace=config.tools.restrict_to_workspace,
         session_manager=session_manager,
@@ -467,6 +468,7 @@ def agent(
         memory_window=config.agents.defaults.memory_window,
         brave_api_key=config.tools.web.search.api_key or None,
         exec_config=config.tools.exec,
+        github_api_token=config.tools.github.api_token or None,
         restrict_to_workspace=config.tools.restrict_to_workspace,
         mcp_servers=config.tools.mcp_servers,
     )

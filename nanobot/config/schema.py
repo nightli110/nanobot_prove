@@ -219,6 +219,11 @@ class ExecToolConfig(BaseModel):
     timeout: int = 60
 
 
+class GitHubConfig(BaseModel):
+    """GitHub configuration."""
+    api_token: str = ""  # GitHub personal access token (PAT)
+
+
 class MCPServerConfig(BaseModel):
     """MCP server connection configuration (stdio or HTTP)."""
     command: str = ""  # Stdio: command to run (e.g. "npx")
@@ -231,6 +236,7 @@ class ToolsConfig(BaseModel):
     """Tools configuration."""
     web: WebToolsConfig = Field(default_factory=WebToolsConfig)
     exec: ExecToolConfig = Field(default_factory=ExecToolConfig)
+    github: GitHubConfig = Field(default_factory=GitHubConfig)
     restrict_to_workspace: bool = False  # If true, restrict all tool access to workspace directory
     mcp_servers: dict[str, MCPServerConfig] = Field(default_factory=dict)
 

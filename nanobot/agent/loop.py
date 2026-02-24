@@ -49,6 +49,7 @@ class AgentLoop:
         memory_window: int = 50,
         brave_api_key: str | None = None,
         exec_config: "ExecToolConfig | None" = None,
+        github_api_token: str | None = None,
         cron_service: "CronService | None" = None,
         restrict_to_workspace: bool = False,
         session_manager: SessionManager | None = None,
@@ -65,6 +66,7 @@ class AgentLoop:
         self.max_tokens = max_tokens
         self.memory_window = memory_window
         self.brave_api_key = brave_api_key
+        self.github_api_token = github_api_token
         self.exec_config = exec_config or ExecToolConfig()
         self.cron_service = cron_service
         self.restrict_to_workspace = restrict_to_workspace
@@ -80,6 +82,7 @@ class AgentLoop:
             temperature=self.temperature,
             max_tokens=self.max_tokens,
             brave_api_key=brave_api_key,
+            github_api_token=self.github_api_token,
             exec_config=self.exec_config,
             restrict_to_workspace=restrict_to_workspace,
         )
